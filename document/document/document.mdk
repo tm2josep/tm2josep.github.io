@@ -54,4 +54,55 @@ Example: \
 
 Breakdown: A lot happens here, a verb is declared, which creates a 'fact' commonly known as a boolean, where we check if 
 fitzgerald's name property is equal to 'Gatsby'. Then we do an if check, that runs the greet verb on fitzgerald if the fact is true, or 
-runs the greet verb on shakespeare otherwise. 
+runs the greet verb on shakespeare otherwise.
+
+### Boolean operators, or 'fact(s)'
+
+Examples: \
+` imShakespeare is a fact where shakespeare's name is equal to "Shakespeare" // true (fact declarations return their value)` \
+` imFitzgerald is a fact where fitzgerald's name is not equal to "F. Scott Fitzgerald" // false (fact declarations return value)` \
+` shakespeare's name is equal to "Shakespeare" and fitzgeralds's name is not equal to "Gatsby" // true (AND)` \
+` imShakespeare and imFitzgerald // false (AND)` \
+` imShakespeare or imFitzgerald // true (OR)` \
+` either imShakespeare or imFitzgerald // true (OR)` \
+` either imShakespeare or imShakespeare // false (XOR)` \
+
+# Arithmetic
+## Basic
+Examples: \
+`numOne is 3` \
+`numTwo is 4` \
+`numThree is numOne plus numTwo` \
+`// numThree is numOne + numTwo` \
+`numFour is numTwo minus numOne` \
+`// numThree is numTwo - numOne`
+`print numThree // 7` \
+`print numFour // 1` \
+`numFive is numFour divided by numOne` \
+`// numFive is numFour / numOne` \
+`print numFive where form is "2.2" // 02.33` \
+`print roundUp numFive where form is "1.2" // 3.00 ` \
+`print roundDown numFive where form is "1.2" // 2.00 ` \
+`print round numFive where form is "1.2" // 2.00 ` \
+
+Breakdown: Most is self explanatory. At the end, the print verb, like most verbs in the english language, is both polymorphic and variadic. 
+So we add the optional form property to numFive as we send it into the print command, with the string value "2.2" meaning, 2 integer digits, 2 decimal digits.
+The three built in verbs, roundUp, roundDown, and round ignore the form property and adjust only the value of the number, numFive.
+The print command reads the form, and outputs the value accordingly. 
+
+## Advanced
+
+Examples: \
+``
+
+# Classes
+
+## Defining
+
+Example type: \ 
+` dog is a type of animal. ` \
+` dog needs a string name, and a number age. ` \
+` dog can have a string breed. ` \
+
+
+
