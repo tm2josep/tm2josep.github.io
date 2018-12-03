@@ -1,0 +1,57 @@
+Title         : ProseLang
+Author        : T. Mammen Joseph
+
+[TITLE]
+
+# Concept
+
+ - Things commonly known as functions will be called 'verb(s)'
+ - Things commonly known as variables will be called 'noun(s)'
+  - Boolean variables are 'fact(s)' 
+
+# Definitions
+## Variables
+### Primitive: String
+
+Example: \
+` name is 'shakespeare'` \
+` display name `
+
+### Complicated Example
+
+Example: `shakespeare is a writer where name is 'Shakespeare' and lifeSpan is a dateDuration where start is '26 April 1564' to date and end is '23 April 1616' to date.`
+
+Breakdown: A new variable 'shakespeare' is declared, of type writer. The writer type takes in the mandatory parameter 'name', and the optional parameter 'lifeSpan'.
+'lifeSpan' must be of type 'dateDuration', which takes the mandatory parameters 'start' and 'end', which are both strings that are typecast with the 'to' keyword to the type 'date'.
+
+##  Functions or Verbs
+
+Example: \
+  `greet means print "Hello " then print target's name.` \
+  `I greet shakespeare. // Hello Shakespeare`
+
+Breakdown: A verb is declared which displays 'hello' and then the name property of the target. "'s " is the equivalent of -> in php or . in javascript.
+Then "I" which is equivalent to 'this' uses the greet verb, targeting shakespeare.
+
+Example continued:
+  ` fitzgerald is writer where name is "F. Scott Fitzgerald". ` \
+  ` I greet fitzgerald. // Hello F. Scott Fitzgerald `
+
+Note: `greet fitzgerald` is the same as `I greet fitzgerald`. If the caller is ommitted, ProseLang will assume the author meant 'I'.
+
+## If statements
+
+Example: \
+    ` greetTheRightPerson means ` \
+    `   fitzgeraldIsAnImpostor is a fact where fitzgerald's name is equal to 'Gatsby'.` \
+    `   if fitzgeraldIsAnImpostor is true` \
+    `   then ` \
+    `     I greet fitzgerald. ` \
+    `   else ` \
+    `     I greet shakespeare. ` \
+    \
+    ` I greetTheRightPerson // Hello Shakespeare `
+
+Breakdown: A lot happens here, a verb is declared, which creates a 'fact' commonly known as a boolean, where we check if 
+fitzgerald's name property is equal to 'Gatsby'. Then we do an if check, that runs the greet verb on fitzgerald if the fact is true, or 
+runs the greet verb on shakespeare otherwise. 
